@@ -8,6 +8,12 @@ import passport from "passport";
 import googleAuthConfig from "./config/google.config";
 // microservice routes
 import Auth from "./API/Auth";
+import Image from "./API/Image";
+import Order from "./API/Orders";
+import Reviews from "./API/Reviews";
+import User from "./API/User";
+import Food from "./API/Food";
+import Restaurant from "./API/Restaurant";
 
 // Database connection
 import ConnectDB from "./database/connection";
@@ -25,6 +31,14 @@ googleAuthConfig(passport);
 
 // microservices routes
 app.use("/auth", Auth);
+app.use("/image", Image);
+app.use("/order", Order);
+app.use("/reviews", Reviews);
+app.use("/user", User);
+app.use("/food", Food);
+app.use("/restaurant", Restaurant);
+
+console.log("key", process.env.AWS_S3_SECRET_KEY);
 
 app.get("/", function (req, res) {
   res.json({ message: "Success " });

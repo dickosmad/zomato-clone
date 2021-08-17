@@ -1,6 +1,5 @@
 // Library
 import express from "express";
-import bcrypt from "bcryptjs";
 import passport from "passport";
 
 // Models
