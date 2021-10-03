@@ -3,7 +3,7 @@ import express from "express";
 import passport from "passport";
 
 // Database modal
-import { ReviewModel } from "../../database/allModels";
+import { ReviewModel } from "../../database/allModel";
 
 const Router = express.Router();
 
@@ -13,7 +13,7 @@ Desc       Review for new food
 Params    none
 BODY      review object
 Access    Public
-Method    POST  
+Method    POST
 */
 Router.post("/new", async (req, res) => {
   try {
@@ -31,7 +31,7 @@ Des       Add new food review/rating
 Params    _id
 BODY      none
 Access    Public
-Method    DELETE  
+Method    DELETE
 */
 Router.delete("/delete/:_id", async function (req, res) {
   try {

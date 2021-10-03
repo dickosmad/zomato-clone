@@ -3,7 +3,7 @@ import express from "express";
 import passport from "passport";
 
 // Database modal
-import { UserModel } from "../../database/allModels";
+import { UserModel } from "../../database/allModel";
 
 const Router = express.Router();
 
@@ -44,3 +44,4 @@ Router.put("/update/:_id", async function (req, res) {
     return res.status(500).json({ error: error.message });
   }
 });
+export default Router;

@@ -38,8 +38,6 @@ app.use("/user", User);
 app.use("/food", Food);
 app.use("/restaurant", Restaurant);
 
-console.log("key", process.env.AWS_S3_SECRET_KEY);
-
 app.get("/", function (req, res) {
   res.json({ message: "Success " });
 });

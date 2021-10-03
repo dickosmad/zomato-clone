@@ -3,7 +3,7 @@ import express from "express";
 import passport from "passport";
 
 // Database modal
-import { OrderModel } from "../../database/allModels";
+import { OrderModel } from "../../database/allModel";
 
 const Router = express.Router();
 
@@ -12,7 +12,7 @@ Route     /
 Des       Get all orders based on id
 Params    _id
 Access    Public
-Method    GET  
+Method    GET
 */
 Router.get(
   "/:_id",
@@ -39,7 +39,7 @@ Route     /new
 Des       Add new order
 Params    _id
 Access    Public
-Method    POST  
+Method    POST
 */
 Router.post("/new/:_id", async (req, res) => {
   try {

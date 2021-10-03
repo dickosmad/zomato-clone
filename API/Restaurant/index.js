@@ -14,7 +14,7 @@ Params    none
 Access    Public
 Method    GET 
 */
-Router.get("/", function (req, res) {
+Router.get("/", async function (req, res) {
   // Query parameters ;
   try {
     const { city } = req.query;
@@ -69,3 +69,4 @@ Router.get("/search", async function (req, res) {
     return res.status(500).json({ error: error.message });
   }
 });
+export default Router;
